@@ -47,7 +47,7 @@ export const LessonButton=({id,index,totalCount,locked,current,percentage}:Props
             >
                 {current?(
                     <div className="h-[102px] w-[102px] relative">
-                        <div className="absolute -top-6 left-2.5 px-3 border-2 text-green-500 uppercase font-bold py-2.5 bg-white rounded-xl animate-bounce tracking-wide z-10">
+                        <div className="absolute -top-6 left-2.5 px-3 border-2 text-sky-500 uppercase font-bold py-2.5 bg-white rounded-xl animate-bounce tracking-wide z-10">
                             Start
                             <div
                             className="absolute left-1/2 -bottom-2 h-0 w-0 border-x-8 border-x-transparent border-t-8 transform -translate-x-1/2 "

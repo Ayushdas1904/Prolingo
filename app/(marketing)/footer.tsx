@@ -9,7 +9,7 @@ export const Footer = () => {
                     C
                 </Button>
                 <Button size="lg" variant="ghost" className="w-full">
-                    <Image src="/C++.png" alt="C" height={32} width={40} className="mr-4 rounded-md"/>
+                    <Image src="/C++.svg" alt="C" height={32} width={40} className="mr-4 rounded-md"/>
                     C++
                 </Button>
                 <Button size="lg" variant="ghost" className="w-full">

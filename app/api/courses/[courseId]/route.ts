@@ -12,7 +12,7 @@ export const GET = async (
         return new NextResponse("Unauthorized", {status:403});
     }
 
-    const data= await db.query.courses.findfirst({
+    const data= await db.query.courses.findFirst({
         where: eq(courses.id, params.courseId),
     })
 
@@ -45,10 +45,7 @@ export const DELETE = async (
         return new NextResponse("Unauthorized", {status:403});
     }
 
-    const body = await req.json();
-    const data= await db.delete(courses).set({
-        ...body
-    }).where(eq(courses.id, params.courseId)).returning();
+    const data= await db.delete(courses).where(eq(courses.id, params.courseId)).returning();
 
     return NextResponse.json(data[0]);  
 }

@@ -1,18 +1,13 @@
-import dynamic from "next/dynamic";
 import { redirect } from "next/navigation";
 import { isAdmin } from "@/lib/admin";
+import ClientWrapper from "@/components/client-wrapper";// Import the new wrapper
 
-const App = dynamic(() => import("./app"), { ssr: false });
+const AdminPage = () => {
+  if (!isAdmin()) {
+    redirect("/");
+  }
 
-const AdminPage = async () => {
-
-    if (!isAdmin()) {
-        redirect("/");
-    }
-
-    return (
-        <App />
-    )
-}
+  return  <ClientWrapper />;
+};
 
 export default AdminPage;

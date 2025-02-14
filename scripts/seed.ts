@@ -23,7 +23,7 @@ const main=async()=>{
             {
                 id:1,
                 title:"C++",
-                imageSrc:"/C++.png"
+                imageSrc:"/C++.svg"
             },
             {
                 id:2,

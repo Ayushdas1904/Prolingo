@@ -1,4 +1,4 @@
-import {cache, use} from "react";
+import {cache} from "react";
 import db from "./drizzle";
 import {eq} from "drizzle-orm";
 import { auth } from "@clerk/nextjs/server";

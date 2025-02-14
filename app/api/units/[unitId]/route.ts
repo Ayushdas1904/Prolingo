@@ -12,7 +12,7 @@ export const GET = async (
         return new NextResponse("Unauthorized", { status: 403 });
     }
 
-    const data = await db.query.units.findfirst({
+    const data = await db.query.units.findFirst({
         where: eq(units.id, params.unitId),
     })
 
@@ -45,10 +45,8 @@ export const DELETE = async (
         return new NextResponse("Unauthorized", { status: 403 });
     }
 
-    const body = await req.json();
-    const data = await db.delete(units).set({
-        ...body
-    }).where(eq(units.id, params.unitId)).returning();
+
+    const data = await db.delete(units).where(eq(units.id, params.unitId)).returning();
 
     return NextResponse.json(data[0]);
 }
